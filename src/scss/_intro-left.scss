@@ -1,0 +1,219 @@
+.intro {
+    background-color: $color-bg;  
+    &__inner {
+        padding-top: 70px; 
+        display: flex;
+        align-items: flex-start;
+    }
+}
+.user {
+    width: 30%; 
+    display: flex;
+    flex-direction: column;
+    &__inner {
+        width: 100%; 
+        display: flex;
+        flex-direction: column;   
+        margin-left: 25px;
+    }
+    &__info {   
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;   
+        margin-bottom: 32px;
+        position: relative;
+    }
+    &__img {
+        width: 120px; 
+        flex-shrink: 0;
+    }
+    &__icon {
+        width: 15px;
+        height: 15px;
+        fill: #f05d63;
+        margin-left: 2px; 
+        margin-right: 10px;
+        overflow: visible;
+    }
+    &__dots {
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+        cursor: pointer;
+        &-el {
+            width: 4px;
+            height: 4px;
+            margin-bottom: 2px;
+            background-color: $color-main;
+            border-radius: 50%;
+        }
+    } 
+    &__dots:hover &__dots-el {
+        transition: all .5s;
+        background-color: $color-warning;
+    }    
+    &__name {
+        font-size: 24px;
+        line-height: 26px;
+        font-family: $montserrat-semibold;
+        margin-bottom: 5px;
+        width: 100%;  
+    }
+    &__link {
+        font-size: 16px; 
+        font-family: $opensans-regular;
+        color: $color-main;
+        margin-bottom: 25px;
+    }
+    &__edit {
+        font-size: 16px;
+        font-family: $opensans-regular;
+        line-height: 20px;
+        color: $color-warning;
+        text-decoration: underline;
+    }
+    &__txt {
+        font-size: 17px;
+        letter-spacing: 0.2;
+        font-family: $opensans-regular;
+        color: $color-granit;  
+    }
+    &__menu {
+        position: absolute;
+        top: 18px; 
+        right: -155px; 
+        width: 176px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;   
+        background-color: #fff;
+        padding: 16px 0 22px 0;  
+        border-radius: 8px;
+        transition: all .5s; 
+        transform-origin: left top 0;  
+        transform: scale(0);     
+        &-link {
+            margin-top: 16px;
+            font-size: 16px;
+            font-family: $opensans-semibold;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            padding: 10px 0px 10px 24px; 
+            color: $color-main;  
+        }
+        &-link:hover {
+            background-color: $color-bg;
+        }
+        &-link--active {
+            background-color: $color-bg;
+        }
+        &-icon {
+            margin-right: 15px; 
+            width: 19px;
+        }
+    }
+    &__menu--active {
+        top: 30px; 
+        transform: scale(1);
+      } 
+    
+}
+
+.info__follovers {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 24px;
+    &-inner {
+        text-align: center; 
+        margin-right: 47px;
+        cursor: pointer; 
+    }
+    &-inner:hover h1, &-inner:hover p{
+        color: $color-warning;
+        transition: all .5s;
+    }
+    &-title {
+    font-family: $opensans-semibold;
+    font-size: 18px;
+    color: $color-granit;
+    margin-bottom: 10px;
+    }
+    &-subtitle {
+        font-family: $opensans-regular;
+        font-size: 16px;
+        color: $color-silver; 
+    }
+}
+@media (max-width: $xxl) {
+    .user {
+        width: 40%;
+        &__menu {
+            right: -155px;   
+        }
+    }
+}
+
+@media (max-width: $lg) {
+    .intro {
+        &__inner {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+    } 
+    .user {
+        width: 80%;
+        margin-bottom: 25px;   
+        &__menu {
+            transform-origin: right top 0;
+            right: 22px;
+        }
+            &__name {
+                max-width: 200px; 
+            }  
+    }
+    .info__follovers {
+        justify-content: center;
+    }
+    
+}
+@media (max-width: $sm) {
+    .user {
+        width: 100%; 
+        &__name {
+            font-size: 18px;
+            width: 150px;
+        }
+        &__img {
+            width: 100px;
+        }
+        &__menu {
+            width: 136px;
+            &-link {
+                font-size: 14px;
+                padding: 10px 0px 10px 15px;  
+            }
+            &-icon {
+                margin-right: 10px; 
+                width: 15px;
+            }
+        }
+    }
+
+    .info__follovers {
+        justify-content: center;
+        &-inner {
+            margin-right: 30px; 
+        }
+        &-inner:last-child {
+            margin-right: 0;
+        }
+    }
+}
+@media (min-width: $lg) {
+    
+}

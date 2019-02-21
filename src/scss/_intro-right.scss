@@ -1,0 +1,226 @@
+.intro {
+    &__right {
+        width: 70%; 
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-left: 57px; 
+    }
+    &__controls {
+        margin-bottom: 65px;
+        line-height: 22px;
+        &-before {
+         color: $color-main;
+         font-size: 16px;
+         font-family: $opensans-semibold;
+         cursor: pointer;
+         margin-right: 25px;
+        }
+        &-after {
+            color: $color-main;
+            font-size: 16px;
+            font-family: $opensans-semibold;
+            cursor: pointer;      
+        }
+    }
+    &__check {
+        position: absolute;   
+        z-index: -1;
+        opacity: 0;  
+    }
+    &__check + label {
+        position: relative;
+        padding: 0 0 0 70px;
+    }
+    &__check + label:before {
+        content: '';
+        position: absolute;
+        top: -1px;
+        left: 0;
+        width: 40px;  
+        height: 22px; 
+        border-radius: 13px;
+        background: #CDD1DA;;
+        border: 1px solid #CDD1DA;
+        transition: .2s; 
+    }
+    &__check + label:after {
+    content: '';
+    position: absolute;
+    top: 50%; 
+    transform: translateY(-50%);
+    left: 2px;
+    width: 18px;
+    height: 19px;
+    border-radius: 10px;
+    background: #FFF;
+    box-shadow: 0 2px 5px rgba(0,0,0,.3);
+    transition: .2s;
+    }
+    &__check:checked + label:before {
+        background: $color-check;
+      } 
+    &__check:checked + label:after {
+        left: 22px;  
+      } 
+}
+.list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    &__card {
+        width: 45%;
+        background-color: #FFF;
+        box-shadow: 0 24px 24px rgba(0, 0, 0, 0.12); 
+        border-radius: 14px; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 0 24px 24px 0;
+        padding: 56px 24px 27px 24px; 
+        &-title {
+            width: 100%;
+            font-size: 33px; 
+            font-family: $montserrat-regular;
+            color: $color-main;
+            margin-bottom: 49px;
+        }
+        &-down {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center; 
+        }
+        &-details {
+            display: flex;
+            align-items: center;
+        }
+        &-name {
+          font-size: 14px;
+          font-family: $opensans-semibold;
+          color: $color-main;
+          line-height: 18px;  
+        }
+        &-link {
+            font-size: 18px;
+            font-family: $opensans-regular;
+            color: $color-warning; 
+        }
+        &-link:hover {
+            transition: 0.5s; 
+            opacity: 0.7;
+        } 
+        &-stats {    
+            display: flex;
+            align-items: center; 
+            flex-shrink: 0;
+        }
+        &-subtitle {
+            margin-left: 8px;
+            font-size: 14px;
+            font-family: $opensans-semibold;
+            color: $color-main;
+            position: relative;
+        }
+        &-img {    
+            margin-left: 16px;   
+             width: 15px;
+             height: 13px;
+             cursor: pointer;
+             flex-shrink: 0;
+          }
+        &-top {
+            width: 100%;
+              color: $color-main;
+              font-size: 14px; 
+              font-family: $opensans-semibold;
+              margin-bottom: 10px;  
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;   
+          }
+        &-hash {
+            margin-left: 4px;
+            background-color: $color-bg;
+            color: $color-main;
+            border-radius: 6px; 
+            line-height: 19px;
+        }
+        &-hash:hover {
+            transition: all .5s;
+            color: $color-warning;
+        }
+    }
+    &__card:nth-child(2n) {
+        margin-right: 0;
+    }
+    &__card:nth-child(3) {
+      padding-top: 24px;
+    }
+    &__card:last-child {
+        padding-top: 24px; 
+    }
+}
+.circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: $color-circle; 
+    margin-right: 8px; 
+    flex-shrink: 0;
+}
+ .share-icon {
+     margin-right: 4px;
+     width: 11px;
+     height: 11px;
+     cursor: pointer;
+ }
+ @media (max-width: $xxl) {
+     .intro {
+         &__right {
+             width: 60%;
+         }
+     }
+      .list {
+          &__card {
+              &-title {
+                  font-size: 30px;
+              }
+          }
+          &__card:nth-child(3) {
+            padding-left: 20px;
+            padding-right: 17px; 
+          }
+          &__card:last-child {
+            padding-left: 20px;
+            padding-right: 17px;
+          }
+      }
+ }
+ @media (max-width: $lg) {
+    .intro {
+        &__right {
+            width: 100%;
+            align-items: center; 
+            margin-left: 0;
+        }
+    }
+ }
+ @media (max-width: $md) {
+     .list {
+         &__card {
+             width: 100%;
+             margin-right: 0;
+         }
+     }
+ }
+ @media (max-width: $sm) {
+     .intro {
+         &__controls {
+             margin-bottom: 40px;
+         }
+     }
+ }

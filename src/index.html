@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Synth</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    
+     <header class="header">
+         <div class="container">
+             <div class="header__inner">
+                 <div class="header__top">
+                 <a class="header__logo" href="#"><img src="./images/logo.png" alt="logo"></a>
+                 <div class="profile">
+                     <p class="profile__name">Arthur Wood</p>
+                     <img class="profile__avatar" src="./images/avatar.png" alt="avatar">
+                     <svg class="profile__arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path id="a" d="M1185 40l4-4 4 4"/></defs><use fill="#fff" fill-opacity="0" stroke="#3e4056" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="50" stroke-width="2" xlink:href="#a" opacity=".4" transform="translate(-1184 -35)"/></svg>
+                      <div class="profile__icons">
+                        <svg class="profile__icons-el" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="16" viewBox="0 0 14 16"><defs><path id="avx8a" d="M1235.353 39.2v-4.4c0-2.456-1.754-4.512-4.118-5.056V29.2c0-.664-.551-1.2-1.235-1.2s-1.235.536-1.235 1.2v.544c-2.364.544-4.118 2.6-4.118 5.056v4.4L1223 40.8v.8h14v-.8l-1.647-1.6zm-5.348 4.8c.909 0 1.652-.72 1.652-1.6h-3.304c0 .88.743 1.6 1.652 1.6z"/><path id="avx8b" d="M1235.353 39.2v-4.4c0-2.456-1.754-4.512-4.118-5.056V29.2c0-.664-.551-1.2-1.235-1.2s-1.235.536-1.235 1.2v.544c-2.364.544-4.118 2.6-4.118 5.056v4.4L1223 40.8v.8h14v-.8l-1.647-1.6zm-5.348 4.8c.909 0 1.652-.72 1.652-1.6h-3.304c0 .88.743 1.6 1.652 1.6z"/><clipPath id="avx8c"><use fill="#fff" xlink:href="#avx8a"/></clipPath></defs><g><g opacity=".98" transform="translate(-1223 -28)"><use fill="#fff" fill-opacity="0" stroke="#3e4056" stroke-miterlimit="50" stroke-width="4" clip-path="url(&quot;#avx8c&quot;)" xlink:href="#avx8b"/></g></g></svg>
+                        <svg class="profile__icons-el" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16"><defs><path id="8gzea" d="M1255 34a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3h-8a3 3 0 0 1-3-3z"/><path id="8gzeb" d="M1254 33a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a1 1 0 0 1-1 1h-14a1 1 0 0 1-1-1z"/><path id="8gzed" d="M1257 30.73c0-1.105 1.12-2 2.5-2s2.5.895 2.5 2-1.12 2-2.5 2-2.5-.895-2.5-2z"/><path id="8gzee" d="M1267 30.73c0-1.105-1.12-2-2.5-2s-2.5.895-2.5 2 1.12 2 2.5 2 2.5-.895 2.5-2z"/><path id="8gzef" d="M1261 42V32h2v10z"/><clipPath id="8gzec"><use fill="#fff" xlink:href="#8gzea"/></clipPath><clipPath id="8gzeg"><use fill="#fff" xlink:href="#8gzeb"/></clipPath></defs><g><g opacity=".98" transform="translate(-1254 -27)"/><g opacity=".98" transform="translate(-1254 -27)"><use fill="#fff" fill-opacity="0" stroke="#3e4056" stroke-miterlimit="50" stroke-width="4" clip-path="url(&quot;#8gzec&quot;)" xlink:href="#8gzea"/></g><g opacity=".98" transform="rotate(20 709.062 -3538.894)"><use fill="#fff" fill-opacity="0" stroke="#3e4056" stroke-miterlimit="50" stroke-width="2" xlink:href="#8gzed"/></g><g opacity=".98" transform="rotate(20 714.062 -3538.894)"><use fill="#fff" fill-opacity="0" stroke="#3e4056" stroke-miterlimit="50" stroke-width="2" xlink:href="#8gzee"/></g><g opacity=".98" transform="translate(-1254 -27)"><use fill="#3e4056" xlink:href="#8gzef"/></g><g opacity=".98" transform="translate(-1254 -27)"><use fill="#fff" xlink:href="#8gzeb"/><use fill="#fff" fill-opacity="0" stroke="#3e4056" stroke-miterlimit="50" stroke-width="4" clip-path="url(&quot;#8gzeg&quot;)" xlink:href="#8gzeb"/></g></g></svg>
+                        <svg class="profile__icons-el" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="13" viewBox="0 0 16 13"><defs><path id="kbc4a" d="M1287.897 31.652a.642.642 0 0 0-.201-.535l-1.494-1.842V29h4.638l3.586 8.048 3.152-8.048H1302v.275l-1.277 1.254a.387.387 0 0 0-.142.366v9.21c-.023.14.032.28.142.366l1.247 1.254V42h-6.274v-.275l1.292-1.284c.127-.13.127-.168.127-.367V32.63l-3.593 9.34h-.486l-4.183-9.34v6.26a.876.876 0 0 0 .232.718l1.68 2.086v.275H1286v-.275l1.68-2.086c.18-.19.26-.457.217-.719z"/></defs><g><g transform="translate(-1286 -29)"><use fill="#3e3f58" xlink:href="#kbc4a"/></g></g></svg>
+                    </div>
+                    </div>
+                 </div>
+                 <div class="header__bottom">
+                 <nav class="header__nav">
+                    <a class="header__nav-link" href="#">FEED</a>
+                    <a class="header__nav-link" href="#">EXPLORE</a>
+                    <a class="header__nav-link" href="#">DISCUSSIONS</a>
+                 </nav>
+                 <button class="header__btn">
+                    <svg class="header__btn-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20"><defs><path id="w2vea" d="M1272.09 122v-9.09H1263v-1.82h9.09V102h1.82v9.09h9.09v1.82h-9.09V122z"/></defs><g><g transform="translate(-1263 -102)"><use fill="#fff" xlink:href="#w2vea"/></g></g></svg>
+                 </button>
+                 </div>
+             </div>
+         </div>
+     </header>
+
+     <section class="intro">
+         <div class="container">
+             <div class="intro__inner">
+                 <div class="user">
+                     <div class="user__info">
+                         <img class="user__img" src="./images/user-img.png" alt="user"> 
+                         <div class="user__inner">
+                         <h1 class="user__name">Benjamin
+                            Clementine</h1>
+                         <a class="user__link" href="#">@benclementine</a>
+                         <a class="user__edit" href="#"><svg class="user__icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 15 15"><defs><path id="jvv7a" d="M285.48 286.49a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.5.5h-5.5a2 2 0 0 1-2-2zm2 10.04a1 1 0 0 0 1 1h3v-7.04h-4zm4-9.04a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v1h4z"/></defs><g><g transform="rotate(45 491.818 -192.111)"><use xlink:href="#jvv7a"/></g></g></svg>Edit Profile</a>
+                        </div>
+                        <div class="user__dots">
+                            <div class="user__dots-el"></div>
+                            <div class="user__dots-el"></div>
+                            <div class="user__dots-el"></div>
+                            <div class="user__menu">
+                                    <a class="user__menu-link user__menu-link--active" href="#"><svg class="user__menu-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19" height="20" viewBox="0 0 19 20"><defs><path id="m7mva" d="M474 274a2 2 0 0 1-2-2v-12a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1"/><path id="m7mvb" d="M475 262a1 1 0 0 1 1-1h6a1 1 0 0 1 0 2h-6a1 1 0 0 1-1-1z"/><path id="m7mvc" d="M475 266a1 1 0 0 1 1-1h4v2h-4a1 1 0 0 1-1-1z"/><path id="m7mvd" d="M478.48 265a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v13.49a.5.5 0 0 1-.5.5h-5.5a2 2 0 0 1-2-2zm2 10.03a1 1 0 0 0 1 1h3V269h-4zm4-9.03a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1v1h4z"/></defs><g><g clip-path="url(#clip-7836277D-2583-4AE7-B0B5-C558500CE97E)" transform="translate(-471 -257)"><g><g><use fill="#fff" fill-opacity="0" stroke="#3e4056" stroke-miterlimit="50" stroke-width="2" xlink:href="#m7mva"/></g><g><use fill="#3e4056" xlink:href="#m7mvb"/></g><g><use fill="#3e4056" xlink:href="#m7mvc"/></g><g transform="rotate(45 483.5 270)"><use fill="#3e4056" xlink:href="#m7mvd"/></g></g></g></g></svg>Report User</a>
+                                    <a class="user__menu-link" href="#"><svg class="user__menu-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16"><defs><path id="qc84a" d="M474.343 310.657a8 8 0 1 0 11.314-11.314 8 8 0 0 0-11.314 11.314z"/><path id="qc84c" d="M477 308l6-6"/><path id="qc84d" d="M483 308l-6-6"/><clipPath id="qc84b"><use fill="#fff" xlink:href="#qc84a"/></clipPath></defs><g><g clip-path="url(#clip-CBAAED82-8098-41BB-8DC4-FC8519D3B520)" transform="translate(-472 -297)"><g><use fill="#fff" fill-opacity="0" stroke="#3e4056" stroke-miterlimit="50" stroke-width="4" clip-path="url(&quot;#qc84b&quot;)" xlink:href="#qc84a"/></g><g><use fill="#fff" fill-opacity="0" stroke="#3e4056" stroke-miterlimit="50" stroke-width="2" xlink:href="#qc84c"/></g><g><use fill="#fff" fill-opacity="0" stroke="#3e4056" stroke-miterlimit="50" stroke-width="2" xlink:href="#qc84d"/></g></g></g></svg>Block User</a>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="info__follovers">
+                                <div class="info__follovers-inner">
+                                    <h1 class="info__follovers-title">45</h1>
+                                    <p  class="info__follovers-subtitle">synths</p>
+                                </div>
+                                <div class="info__follovers-inner">
+                                   <h1 class="info__follovers-title">110</h1>
+                                   <p  class="info__follovers-subtitle">followers</p>
+                                </div>
+                                <div class="info__follovers-inner">
+                                   <h1 class="info__follovers-title">332</h1>
+                                   <p  class="info__follovers-subtitle">following</p>
+                                </div>
+                            </div>
+                            <p class="user__txt">Cryptocurrencies including Ethereum, Ripple, and Litecoin have all plunged between 20 to 30 percent each, according to CoinMarketCap. Here is the latest Ripple price news and live updates on XRP, bitcoin and Ethereum.</p>
+                        </div>
+                 <div class="intro__right">
+                     <div class="intro__controls">
+                         <label class="intro__controls-before" for="switch">Public</label>
+                         <input class="intro__check"  type="checkbox" id="switch" >
+                         <label class="intro__controls-after" for="switch">Private</label>
+                     </div>
+                     <div class="list">
+                         <div class="list__card">
+                             <h1 class="list__card-title">New air routes that promise cheap flights in</h1>
+                             <div class="list__card-down">
+                                 <div class="list__card-details">
+                                     <div class="circle"></div>
+                                     <h1 class="list__card-name">Gregory Watkins</h1>
+                                 </div>
+                                 <a class="list__card-link" href="#">Share</a>
+                             </div>
+                         </div>
+                         <div class="list__card">
+                                <h1 class="list__card-title">New air routes that promise cheap flights in</h1>
+                                <div class="list__card-down">
+                                    <div class="list__card-details">
+                                        <div class="circle"></div>
+                                        <h1 class="list__card-name">Gregory Watkins</h1>
+                                    </div>
+                                    <a class="list__card-link" href="#">Share</a>
+                                </div>
+                            </div>
+                         <div class="list__card">
+                             <p class="list__card-top">Shared to<a class="list__card-hash" href="#"> #discussionaboutanimgttdds…</a></p>
+                             <h1 class="list__card-title">New air routes that promise cheap flights in</h1>
+                             <div class="list__card-down">
+                                    <div class="list__card-details">
+                                        <div class="circle"></div>
+                                        <h1 class="list__card-name">Gregory Watkins</h1>
+                                    </div>
+                                    <div class="list__card-stats">
+                                        <img class="list__card-img" src="./images/play.png" alt="">
+                                        <p class="list__card-subtitle">88</p> 
+                                        <img class="list__card-img" src="./images/heart.png" alt="">
+                                        <p class="list__card-subtitle">24</p>
+                                    </div>
+                                </div>
+                         </div>
+                         
+                         <div class="list__card"> 
+                            <p class="list__card-top"><svg class="share-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 14 14"><defs><path id="90iba" d="M962 611.01a1 1 0 0 0 1 .99c.556 0 1-.444 1-.99v-4.02a1 1 0 0 0-1-.99c-.556 0-1 .444-1 .99zm1-8.01c1.657 0 3 1.342 3 2.997V607h2v-1.003a5.001 5.001 0 0 0-10 0V607h2v-1.003a3 3 0 0 1 3-2.997zm3 9.003a3 3 0 0 1-6 0V611h-2v1.003a5.001 5.001 0 0 0 10 0V611h-2z"/></defs><g><g transform="rotate(45 1211.678 -845.994)"><use fill="#3e4056" xlink:href="#90iba"/></g></g></svg>Shared via weblink</p>
+                                <h1 class="list__card-title">New air routes that promise cheap flights in</h1>
+                                <div class="list__card-down">
+                                       <div class="list__card-details">
+                                           <div class="circle"></div>
+                                           <h1 class="list__card-name">Gregory Watkins</h1>
+                                       </div>
+                                       <div class="list__card-stats">
+                                        <img class="list__card-img" src="./images/play.png" alt="">
+                                        <p class="list__card-subtitle">88</p>
+                                        <img class="list__card-img" src="./images/heart.png" alt="">
+                                        <p class="list__card-subtitle">24</p>
+                                    </div>
+                                   </div>
+                            </div>
+                     </div>
+                 </div>
+                </div>
+             </div>
+         </div>
+     </section>
+
+     <script src="./js/main.js"></script>
+</body>
+</html>
