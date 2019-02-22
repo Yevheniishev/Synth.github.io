@@ -36,6 +36,7 @@
     &__check + label {
         position: relative;
         padding: 0 0 0 70px;
+        outline: none;
     }
     &__check + label:before {
         content: '';
@@ -62,6 +63,7 @@
     background: #FFF;
     box-shadow: 0 2px 5px rgba(0,0,0,.3);
     transition: .2s;
+    outline: none;
     }
     &__check:checked + label:before {
         background: $color-check;
